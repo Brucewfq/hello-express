@@ -35,29 +35,8 @@ const data = [{
     date: '2018-10-17'
 }];
 
-app.use(cookieParser());
 app.get('/', function (req, res) {
-    console.log(req.cookie)
-    const blogSchema = new mongoose.Schema({
-        name:  String,
-        sex: String,
-        age:   Number,
-        address: String,
-        date: String
-    });
-    const toDo = mongoose.model('Todo', blogSchema);
-    const itemOne = toDo({
-        name: 'Tom',
-        age: 12,
-        sex: '男',
-        address: '上海',
-        date: '2018-10-17'
-    }).save(function (err) {
-        if (err) throw err;
-        console.log('item saved')
-    });
-    res.cookie('user', 'Tom')
-    res.send(data);
+    res.send('hello world');
 });
 
 app.listen('3000');
