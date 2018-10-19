@@ -44,7 +44,13 @@ app.get('/user', function (req, res) {
         address: '上海'
     });
 });
-
+app.get('/test', function (req, res) {
+    res.send({
+        name: 'tom',
+        age: '20',
+        address: '北京'
+    });
+});
 // app.listen(port);
 const port = process.env.PORT || 3000
 app.listen(port, function () {
