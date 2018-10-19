@@ -7,7 +7,6 @@
  */
 const express = require('express');
 const app  = express();
-const port = (process.env.PORT || 3000)
 const cookieParser = require('cookie-parser')
 // 引入mongoose模块
 const mongoose = require('mongoose');
@@ -39,4 +38,8 @@ app.get('/', function (req, res) {
     res.send('hello world');
 });
 
-app.listen(port);
+// app.listen(port);
+const port = process.env.PORT || 3000
+app.listen(port, function () {
+    console.log(`listening on port ${port}`)
+})
