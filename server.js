@@ -52,7 +52,7 @@ app.get('/test', function (req, res) {
     });
 });
 
-app.get('/test1', function (req, res) {
+app.get('/test3', function (req, res) {
     res.send({
         name: 'jack',
         age: '20',
